@@ -18,7 +18,6 @@ def initialize_parameters(n_x, n_h, n_y):
     b1 = np.zeros((n_h, 1))                # Bias vector for hidden layer
     W2 = np.random.randn(n_y, n_h) * 0.01  # Weight matrix for output layer
     b2 = np.zeros((n_y, 1))                # Bias vector for output layer
-
     parameters = {"W1": W1, "b1": b1,
                   "W2": W2, "b2": b2}
     return parameters
@@ -37,15 +36,12 @@ def forward_propagation(X, parameters):
     b1 = parameters['b1']
     W2 = parameters['W2']
     b2 = parameters['b2']
-
     # Hidden layer computations
     Z1 = np.dot(W1, X.T) + b1
     A1 = relu(Z1)
-
     # Output layer computations
     Z2 = np.dot(W2, A1) + b2
     A2 = sigmoid(Z2)
-
     cache = {"Z1": Z1, "A1": A1,
              "Z2": Z2, "A2": A2}
     return A2, cache
