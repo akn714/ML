@@ -31,11 +31,12 @@ def softmax(Z):
 def sigmoid(Z):
     return 1 / (1 + np.exp(-Z))
 
+# checked
 def forward_prop(W1, W2, b1, b2):
-    A0 = X.T # 2x4
-    Z1 = W1.T.dot(A0) + b1 # 4x4
+    A0 = X # 4x2
+    Z1 = W1.T.dot(A0.T) + b1 # 4x4
     A1 = ReLU(Z1) # 4x4
-    Z2 = W2.T.dot(A1) + b2 # 1x4
+    Z2 = W2.T.dot(A1.T) + b2 # 1x4
     A2 = sigmoid(Z2) # 1x4
     # print('X: ', X.shape)
     # print('A0: ', A0.shape)
@@ -50,26 +51,32 @@ def forward_prop(W1, W2, b1, b2):
 def relu_derivative(Z):
     return Z > 0
 
+# checked
 def backward_prop(W1, W2, b1, b2, Z1, A1, Z2, A2):
     m = X.shape[0]
     dZ2 = A2 - Y.T # 1x4
-    dW2 = (1/m)*dZ2.dot(A1).T # 4x1
+    dW2 = (1/m)*dZ2.dot(A1.T).T # 4x1
     db2 = (1/m)*np.sum(dZ2, axis=1, keepdims=True) # 1x1
 
     dZ1 = W2.dot(dZ2) * relu_derivative(Z1) # 4x4
-    dW1 = (1/m)*dZ1.dot(X).T # 2x4
+    dW1 = (1/m)*dZ1.T.dot(X).T # 2x4
     db1 = (1/m)*np.sum(dZ1, axis=1, keepdims=True) # 4x1
     
     return dW1, dW2, db1, db2
 
 def update_params(W1, W2, b1, b2, dW1, dW2, db1, db2):
-    α = 0.1;
+    α = 0.01;
     W1 = W1 - α*dW1
     b1 = b1 - α*db1
     W2 = W2 - α*dW2
     b2 = b2 - α*db2
     
     return W1, W2, b1, b2
+
+def predict(W1, W2, b1, b2):
+    Z1, A1, Z2, A2 = forward_prop(W1, W2, b1, b2)
+    print((A2>0.5))
+    print(A2)
 
 
 if __name__ == '__main__':
@@ -82,13 +89,19 @@ if __name__ == '__main__':
         Z1, A1, Z2, A2 = forward_prop(W1, W2, b1, b2)
         dW1, dW2, db1, db2 = backward_prop(W1, W2, b1, b2, Z1, A1, Z2, A2)
         W1, W2, b1, b2 = update_params(W1, W2, b1, b2, dW1, dW2, db1, db2)
+        print(b1)
         a = (A2>0.5)
         if np.array_equal(nparr, a): acc += 1
         # print((A2>0.5))
         iterations -= 1
+
     # print(acc)
-    print('Accuracy: [', acc/100, ']')
-    
+    print('Accuracy: [ {}% ]'.format(acc/100))
+
+    print()
+    print('Testing...')
+    print('Output:')
+    output = predict(W1, W2, b1, b2)
 
 
 
