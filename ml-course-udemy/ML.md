@@ -17,19 +17,18 @@
 
 ---
 
-#### Data Preprocessing
-- Data Loading
-- Data Clearning (filling missing values with avg. of all the values in the column)
-- Data Splitting (Training and Test)
-- Feature Scaling if needed
+#### Progress (lectues)
+- [x] Data Preprocessing (lecture 1 - 29)
+	- [x] Data Loading
+	- [x] Data Clearning (filling missing values)
+	- [x] Data Splitting (into training and test)
+	- [x] Feature Scaling (if needed)
+- [ ] Regression (lecture 41 - )
+	- [x] Simple Linear Regression (41 - 50)
+    - [ ] Multiple Linear Regression (56 - )
+    - [ ] Polynomial Regression
+    - [ ] Support Vector for Regression (SVR)
+    - [ ] Decision Tree Regression
+    - [ ] Random Forest Regression
 
-**Feature Scaling:**<br>
-- Converting all the values in the column to lie in a range (like o to 1, -3 to +3)
-- Feature scaling is only applied to columns.
-- Feature scaling is always applied after splitting the data
-    - use same scaler [StandardScaler(standardization), MinMaxScaler(normalization)] for both data (test set and trainig set) but seperately
-    - if feature scaling is used before data splitting then the model may learn the data in the test set even if is not directly used for training
-    ```
-    - Scaling is done after data splitting to prevent **data leakage**. 
-    - If done before splitting, scaled training data would be influenced by unseen test data, affecting model performance.
-    ```
+
