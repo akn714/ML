@@ -17,7 +17,7 @@
 
 ---
 
-#### Progress (lectues)
+#### Progress (lectures)
 - [x] Data Preprocessing (lecture 1 - 29)
 	- [x] Data Loading
 	- [x] Data Clearning (filling missing values)
@@ -25,7 +25,7 @@
 	- [x] Feature Scaling (if needed)
 - [ ] Regression (lecture 41 - )
 	- [x] Simple Linear Regression (41 - 50)
-    - [ ] Multiple Linear Regression (56 - )
+    - [x] Multiple Linear Regression (56 - 72)
     - [ ] Polynomial Regression
     - [ ] Support Vector for Regression (SVR)
     - [ ] Decision Tree Regression
