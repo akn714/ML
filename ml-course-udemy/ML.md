@@ -26,7 +26,7 @@
 - [ ] Regression (lecture 41 - )
 	- [x] Simple Linear Regression (41 - 50)
     - [x] Multiple Linear Regression (56 - 72)
-    - [ ] Polynomial Regression
+    - [x] Polynomial Regression (81 - 89)
     - [ ] Support Vector for Regression (SVR)
     - [ ] Decision Tree Regression
     - [ ] Random Forest Regression
