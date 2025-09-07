@@ -1,5 +1,7 @@
 ## Machine Learning
 
+**Note:** Build project from [here](https://github.com/akn714/vault0/) for practice after completing ML.
+
 #### Machine Learning Process
 **Data Pre-Processing**
 - Importing data
@@ -27,7 +29,7 @@
 	- [x] Simple Linear Regression (41 - 50)
     - [x] Multiple Linear Regression (56 - 72)
     - [x] Polynomial Regression (81 - 89)
-    - [ ] Support Vector for Regression (SVR)
+    - [x] Support Vector for Regression (SVR) (101 - 111)
     - [ ] Decision Tree Regression
     - [ ] Random Forest Regression
 
