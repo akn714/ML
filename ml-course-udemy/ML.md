@@ -30,7 +30,7 @@
     - [x] Multiple Linear Regression (56 - 72)
     - [x] Polynomial Regression (81 - 89)
     - [x] Support Vector for Regression (SVR) (101 - 111)
-    - [ ] Decision Tree Regression
+    - [x] Decision Tree Regression (114 - 119)
     - [ ] Random Forest Regression
 
 
