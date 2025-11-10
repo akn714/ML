@@ -31,6 +31,6 @@
     - [x] Polynomial Regression (81 - 89)
     - [x] Support Vector for Regression (SVR) (101 - 111)
     - [x] Decision Tree Regression (114 - 119)
-    - [ ] Random Forest Regression
+    - [x] Random Forest Regression (124 - 126)
 
 
