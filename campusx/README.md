@@ -4,3 +4,8 @@
 3. Types of ML
 4. [Batch ML (Offline Learning)](4.5.md)
 5. [Online ML](4.5.md)
+6. [Instance-Based Vs. Model-Based Learning](6.md)
+7. [Challenges in Machine Learning](7.md)
+8. [Applications of Machine Learning](8.md)
+
+> Youtube Video Transcription Tool [Link](https://tactiq.io/tools/youtube-transcript)
